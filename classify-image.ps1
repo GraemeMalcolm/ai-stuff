@@ -1,5 +1,5 @@
-$predictionUrl="https://gmalc-cog.cognitiveservices.azure.com/customvision/v3.0/Prediction/472aef85-c536-4b3c-a34e-c41d7f51d584/classify/iterations/fruit/url"
-$predictionKey = "9fc9db061ed04f448cc31a01050bd976"
+$predictionUrl="YOUR_PREDICTION_URL"
+$predictionKey = "YOUR_PREDITION_KEY"
 
 
 

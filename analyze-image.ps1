@@ -1,5 +1,5 @@
-$endpoint="https://gmalc-cog.cognitiveservices.azure.com/"
-$key="9fc9db061ed04f448cc31a01050bd976"
+$endpoint="YOUR_COG_SERVICES_ENDPOINT"
+$key="YOUR_COG_SERVICES_KEY"
 
 
 
