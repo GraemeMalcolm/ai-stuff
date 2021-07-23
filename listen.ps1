@@ -3,7 +3,7 @@ $key="YOUR_COGNITIVE_SERVICES_KEY"
 
 
 
-# Code to call Computer Vision service for image analysis
+# Code to call Speech to Text API
 $wav = "./data/speech/time.wav"
 
 $headers = @{}
@@ -18,4 +18,4 @@ $result = Invoke-RestMethod -Method Post `
           -InFile $wav
 
 $analysis = $result
-($analysis.DisplayText)
+Write-Host ("`n", $analysis.DisplayText)
