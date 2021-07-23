@@ -1,4 +1,4 @@
-$endpoint="YOUR_ENDPOINT"
+$endpoint="YOUR__ENDPOINT"
 $key="YOUR_KEY"
 
 
