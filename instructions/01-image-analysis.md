@@ -70,27 +70,35 @@ Now that you have a cloud shell environment, you can run a simple client applica
     $key="1a2b3c4d5e6f7g8h9i0j...."
     ```
 
-6. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
+5. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
 
     The sample client application will use your Computer Vision service to analyze the following image, taken by a camera in the Northwind Traders store:
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/store-cam1.jpg)
 
-7. In the PowerShell pane, enter the following command to run the code:
+6. In the PowerShell pane, enter the following command to run the code:
 
     ```
     cd ai-stuff
     .\analyze-image.ps1 store-cam1.jpg
     ```
 
-8. Review the results of the image analysis, which include:
+7. Review the results of the image analysis, which include:
     - A suggested caption that describes the image.
     - A list of objects identified in the image.
     - A list of "tags" that are relevant to the image.
 
-9. Now let's try another image:
+8. Now let's try another image:
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/store-cam2.jpg)
+
+    To analyze the second image, enter the following command:
+
+    ```
+    .\analyze-image.ps1 store-cam2.jpg
+    ```
+
+9. Review the results of the image analysis for the second image.
 
 ## Learn more
 

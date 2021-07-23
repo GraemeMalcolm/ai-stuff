@@ -1,4 +1,4 @@
-$endpoint="YOUR__ENDPOINT"
+$endpoint="YOUR_ENDPOINT"
 $key="YOUR_KEY"
 
 
@@ -10,13 +10,13 @@ if ($args.count -gt 0 -And $args[0] -in ("store-cam1.jpg", "store-cam2.jpg"))
     $img_file = $args[0]
 }
 
-$img1 = "https://github.com/GraemeMalcolm/ai-stuff/raw/main/data/vision/$img_file"
+$img = "https://github.com/GraemeMalcolm/ai-stuff/raw/main/data/vision/$img_file"
 
 $headers = @{}
 $headers.Add( "Ocp-Apim-Subscription-Key", $key )
 $headers.Add( "Content-Type","application/json" )
 
-$body = "{'url' : '$img1'}"
+$body = "{'url' : '$img'}"
 
 write-host "Analyzing image..."
 $result = Invoke-RestMethod -Method Post `
