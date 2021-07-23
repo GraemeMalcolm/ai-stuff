@@ -76,7 +76,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/store-cam1.jpg)
 
-6. In the PowerShell pane, enter the following command to run the code:
+6. In the PowerShell pane, enter the following commands to run the code:
 
     ```
     cd ai-stuff
