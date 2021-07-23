@@ -8,7 +8,7 @@ lab:
 
 To build software that can interpret audible speech and respond appropriately, you can use the **Speech** cognitive service, which provides a simple way to transcribe spoken language into text and vice-versa.
 
-For example, suppose you want to create a smart device that can respond verbally to spoken questions, such as "What is the time?"
+For example, suppose you want to create a smart device that can respond verbally to spoken questions, such as "What time is it?"
 
 ## Create a *Speech* resource
 
