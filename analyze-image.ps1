@@ -1,10 +1,16 @@
-$endpoint="YOUR_COG_SERVICES_ENDPOINT"
-$key="YOUR_COG_SERVICES_KEY"
+$endpoint="YOUR_ENDPOINT"
+$key="YOUR_KEY"
 
 
 
 # Code to call Computer Vision service for image analysis
-$img1 = "https://github.com/GraemeMalcolm/ai-stuff/raw/main/data/vision/store-cam1.jpg"
+$img_file = "store-cam1.jpg"
+if ($args.count -gt 0 -And $args[0] -in ("store-cam1.jpg", "store-cam2.jpg"))
+{
+    $img_file = $args[0]
+}
+
+$img1 = "https://github.com/GraemeMalcolm/ai-stuff/raw/main/data/vision/$img_file"
 
 $headers = @{}
 $headers.Add( "Ocp-Apim-Subscription-Key", $key )
