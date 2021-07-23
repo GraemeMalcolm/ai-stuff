@@ -30,7 +30,7 @@ Let's start by creating a **Computer Vision** resource in your Azure subscriptio
 
 To test the capabilities of the Computer Vision service, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.
 
-1. In the Azure portal, select the **[>_]** (*Cloud Shell*) button at the top of the page to the left of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.
+1. In the Azure portal, select the [**>_**] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.
 
     ![Azure cloud shell pane](./media/cloud-shell.png)
 
