@@ -70,7 +70,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 5. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
 
-    The sample client application will use your Computer Vision service to analyze the following image, taken by a camera in the Northwind Traders store:
+    The sample client application will use your Face service to analyze the following image, taken by a camera in the Northwind Traders store:
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/store-cam1.jpg)
 
@@ -78,7 +78,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ```
     cd ai-stuff
-    .\analyze-image.ps1 store-cam1.jpg
+    .\find-faces.ps1 store-cam1.jpg
     ```
 
 7. Review the results of the image analysis, which include:
