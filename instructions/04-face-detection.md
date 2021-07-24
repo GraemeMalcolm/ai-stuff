@@ -86,7 +86,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
     - The approximate age of the person
     - An indication of the emotional state of the person (based on proportional scores for a range of emotions)
 
-    Note that the location of a face is indicated by the top, left coordinates and the width, and height of a *bounding box*, as shown here:
+    Note that the location of a face is indicated by the top- left coordinates, and the width and height of a *bounding box*, as shown here:
 
     ![An image of a person with their face outlined](./media/store-cam1-face.jpg)
 
