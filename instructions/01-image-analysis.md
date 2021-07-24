@@ -90,7 +90,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 8. Now let's try another image:
 
-    ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/store-cam2.jpg)
+    ![An image of person with a shopping basket in a supermarket](./media/store-cam2.jpg)
 
     To analyze the second image, enter the following command:
 
