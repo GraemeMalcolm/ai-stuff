@@ -1,5 +1,5 @@
-$endpoint="YOUR_COG_SERVICES_ENDPOINT"
-$key="YOUR_COG_SERVICES_KEY"
+$endpoint="YOUR_ENDPOINT"
+$key="YOUR_KEY"
 
 
 
@@ -24,7 +24,8 @@ $result = Invoke-RestMethod -Method Post `
           -Headers $headers `
           -Body $body | ConvertTo-Json -Depth 5
 
-$analysis = ($result | ConvertFrom-Json).value
+$analysis = ($result | ConvertFrom-Json)
+($result)
 foreach ($face in $analysis)
 {
     Write-Host("Face location: $($face.faceRectangle)`n - Age:$($face.faceAttributes.age)`n - Emotions: $($face.faceAttributes.emotion)`n")
