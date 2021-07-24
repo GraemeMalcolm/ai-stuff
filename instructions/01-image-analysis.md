@@ -100,6 +100,18 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 9. Review the results of the image analysis for the second image.
 
+10. Let's try one more:
+
+    ![An image of person with a shopping cart](./media/store-cam3.jpg)
+
+    To analyze the third image, enter the following command:
+
+    ```
+    .\analyze-image.ps1 store-cam3.jpg
+    ```
+
+11. Review the results of the image analysis for the third image.
+
 ## Learn more
 
 This simple app shows only some of the capabilities of the Computer Vision service. To learn more about what you can do with this service, see the [Computer Vision page](https://azure.microsoft.com/services/cognitive-services/computer-vision/).

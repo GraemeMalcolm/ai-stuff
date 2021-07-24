@@ -81,23 +81,39 @@ Now that you have a cloud shell environment, you can run a simple client applica
     .\find-faces.ps1 store-cam1.jpg
     ```
 
-7. Review the results of the image analysis, which include:
-    - A suggested caption that describes the image.
-    - A list of objects identified in the image.
-    - A list of "tags" that are relevant to the image.
+7. Review the details of the faces found in the image, which include:
+    - The location of the face in the image
+    - The approximate age of the person
+    - An indication of the emotional state of the person (based on proportional scores for a range of emotions)
+
+    Note that the location of a face is indicated by the top, left coordinates and the width, and height of a *bounding box*, as shown here:
+
+    ![An image of a person with their face outlined](./media/store-cam1-face.jpg)
 
 8. Now let's try another image:
 
-    ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/store-cam2.jpg)
+    ![An image of person with a shopping basket](./media/store-cam2.jpg)
 
     To analyze the second image, enter the following command:
 
     ```
-    .\analyze-image.ps1 store-cam2.jpg
+    .\find-faces.ps1 store-cam2.jpg
     ```
 
-9. Review the results of the image analysis for the second image.
+9. Review the results of the face analysis for the second image.
+
+10. Let's try one more:
+
+    ![An image of person with a shopping cart](./media/store-cam3.jpg)
+
+    To analyze the third image, enter the following command:
+
+    ```
+    .\find-faces.ps1 store-cam3.jpg
+    ```
+
+11. Review the results of the face analysis for the third image.
 
 ## Learn more
 
-This simple app shows only some of the capabilities of the Computer Vision service. To learn more about what you can do with this service, see the [Computer Vision page](https://azure.microsoft.com/services/cognitive-services/computer-vision/).
+This simple app shows only some of the capabilities of the Face service. To learn more about what you can do with this service, see the [Face page](https://azure.microsoft.com/services/cognitive-services/face/).

@@ -4,13 +4,13 @@ $key="YOUR_KEY"
 
 
 # Code to call Face service for face detection
-$img_num = 1
-if ($args.count -gt 0 -And $args[0] -in (1..2))
+$img_file = "store-cam1.jpg"
+if ($args.count -gt 0 -And $args[0] -in ("store-cam1.jpg", "store-cam2.jpg", "store-cam3.jpg", "store-cam4.jpg"))
 {
-    $img_num = $args[0]
+    $img_file = $args[0]
 }
 
-$img = "https://github.com/GraemeMalcolm/ai-stuff/raw/main/data/vision/store-cam$($img_num).jpg"
+$img = "https://github.com/GraemeMalcolm/ai-stuff/raw/main/data/vision/$img_file"
 
 $headers = @{}
 $headers.Add( "Ocp-Apim-Subscription-Key", $key )
@@ -25,7 +25,6 @@ $result = Invoke-RestMethod -Method Post `
           -Body $body | ConvertTo-Json -Depth 5
 
 $analysis = ($result | ConvertFrom-Json)
-($result)
 foreach ($face in $analysis)
 {
     Write-Host("Face location: $($face.faceRectangle)`n - Age:$($face.faceAttributes.age)`n - Emotions: $($face.faceAttributes.emotion)`n")
