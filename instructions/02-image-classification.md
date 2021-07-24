@@ -158,4 +158,4 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 ## Learn more
 
-This simple app shows only some of the capabilities of the Custom Vision service. To learn more about what you can do with this service, see the [Computer Vision page](https://azure.microsoft.com/services/cognitive-services/computer-vision/).
+This simple app shows only some of the capabilities of the Custom Vision service. To learn more about what you can do with this service, see the [Custom Vision page](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/).
