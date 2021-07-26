@@ -7,7 +7,7 @@ lab:
 
 Increasingly, we expect computers to be able to use AI in order to understand spoken or typed commands in natural language. For example, you might want to implement a home automation system that enables you to control devices in your home by using voice commands such as "switch on the light" or "put the fan on", and have an AI-powered device understand the command and take appropriate action.
 
-## Create Authoring and Prediction Resources
+## Create *Language Understanding* Resources
 
 Microsoft cognitive services includes the Language Understanding service, which enables you to define *intents* that are applied to *entities* based on *utterances*. You can use either a **Language Understanding** or  **Cognitive Services** resource to *publish* a Language Understanding app, but you must create a separate **Language Understanding** resource for *authoring* the app.
 
@@ -81,7 +81,7 @@ To use your trained model in a client application, you must publish it as an end
 
 To consume your language model from a client, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.
 
-## Create a cloud shell
+### Create a cloud shell
 
 First, you'll need a cloud shell in which to run the app.
 
@@ -96,7 +96,7 @@ First, you'll need a cloud shell in which to run the app.
 
     > **Note**: If you selected *Bash*, or you had previously opened a Bash cloud shell, you can switch to PowerShell by using the drop-down menu at the top left of the cloud shell pane.
 
-## Configure and run a client application
+### Configure and run a client application
 
 Now that you have a cloud shell environment, you can run a simple client application that uses the Computer Vision service to analyze an image.
 
@@ -140,3 +140,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 9. Review the results from this command- the app should have predicted that the intended action is to switch off the fan.
 10. Experiment with a few more commands; including commands that the model was not trained to support, such as "Hello" or "switch on the oven". The app should generally understand commands for which its language model is defined, and fail gracefully for other input.
+
+## Learn more
+
+This simple app shows only some of the capabilities of the Language Understanding service. To learn more about what you can do with this service, see the [Language Understanding page](https://azure.microsoft.com/services/cognitive-services/language-understanding-intelligent-service//).
