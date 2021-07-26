@@ -48,14 +48,14 @@ Now that you have a cloud shell environment, you can run a simple client applica
 1. In the command shell, enter the following command to download the sample application.
 
     ```
-    git clone https://github.com/GraemeMalcolm/ai-stuff
+    git clone https://github.com/GraemeMalcolm/ai-stuff ai-900
     ```
 
-2. The files are downloaded to a folder named **ai-stuff**. To see all of the files in your cloud shell storage, select the **{ }** (*Open editor*) icon on the bar at the top of the cloud shell pane. This opens an additional editor pane above the cloud shell pane, like this:
+2. The files are downloaded to a folder named **ai-900**. To see all of the files in your cloud shell storage, select the **{ }** (*Open editor*) icon on the bar at the top of the cloud shell pane. This opens an additional editor pane above the cloud shell pane, like this:
 
     ![Azure cloud shell editor](./media/editor-pane.png)
 
-3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-stuff** and select **analyze-image.ps1**. This file contains some code that uses the Computer Vision service to analyze an image, as shown here:
+3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **analyze-image.ps1**. This file contains some code that uses the Computer Vision service to analyze an image, as shown here:
 
     ![The editor containing code to analyze an image](./media/analyze-image-code.png)
 
@@ -76,11 +76,10 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/store-cam1.jpg)
 
-6. In the PowerShell pane, enter the following commands to run the code:
+6. In the PowerShell pane, enter the following command to run the code:
 
     ```
-    cd ai-stuff
-    .\analyze-image.ps1 store-cam1.jpg
+    .\ai-900\analyze-image.ps1 store-cam1.jpg
     ```
 
 7. Review the results of the image analysis, which include:
@@ -95,7 +94,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
     To analyze the second image, enter the following command:
 
     ```
-    .\analyze-image.ps1 store-cam2.jpg
+    .\ai-900\analyze-image.ps1 store-cam2.jpg
     ```
 
 9. Review the results of the image analysis for the second image.
@@ -107,7 +106,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
     To analyze the third image, enter the following command:
 
     ```
-    .\analyze-image.ps1 store-cam3.jpg
+    .\ai-900\analyze-image.ps1 store-cam3.jpg
     ```
 
 11. Review the results of the image analysis for the third image.

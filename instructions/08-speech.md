@@ -47,14 +47,14 @@ Now that you have a cloud shell environment, you can run a simple client applica
 1. In the command shell, enter the following command to download the sample application.
 
     ```
-    git clone https://github.com/GraemeMalcolm/ai-stuff
+    git clone https://github.com/GraemeMalcolm/ai-stuff ai-900
     ```
 
-2. The files are downloaded to a folder named **ai-stuff**. To see all of the files in your cloud shell storage, select the **{ }** (*Open editor*) icon on the bar at the top of the cloud shell pane. This opens an additional editor pane above the cloud shell pane, like this:
+2. The files are downloaded to a folder named **ai-900**. To see all of the files in your cloud shell storage, select the **{ }** (*Open editor*) icon on the bar at the top of the cloud shell pane. This opens an additional editor pane above the cloud shell pane, like this:
 
     ![Azure cloud shell editor](./media/editor-pane.png)
 
-3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-stuff** and select **speaking-clock.ps1**. This file contains some code that uses the Speech service to recognize and synthesize speech:
+3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **speaking-clock.ps1**. This file contains some code that uses the Speech service to recognize and synthesize speech:
 
     ![The editor containing code to use the Speech service](./media/speaking-clock-code.png)
 
@@ -80,11 +80,10 @@ Now that you have a cloud shell environment, you can run a simple client applica
     Your browser does not support the audio element.
     </audio>
 
-6. In the PowerShell pane, enter the following commands to run the code:
+6. In the PowerShell pane, enter the following command to run the code:
 
     ```
-    cd ai-stuff
-    .\speaking-clock.ps1
+    .\ai-900\speaking-clock.ps1
     ```
 
 7. Review the output, which should have successfully recognized the text "What time is it?" and saved an appropriate response in a file named *output.wav*.

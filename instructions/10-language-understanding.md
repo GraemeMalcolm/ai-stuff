@@ -42,9 +42,9 @@ To implement natural language understanding with Language Understanding, you cre
 
 An *intent* is an action you want to perform - for example, you might want to switch a light on, or turn a fan off. In this case, you'll define two intents: one to switch a device on, and another to switch a device off. For each intent, you'll specify sample *utterances* that indicate the kind of language used to indicate the intent.
 
-1. In the pane on the left, ensure that **Intents** is selected Then click **Create**, and add an intent with the name **switch_on** and click **Done**.
+1. In the pane on the left, ensure that **Intents** is selected Then click **Create**, and add an intent with the name **switch_on** (in lower-case) and click **Done**.
 2. Under the **Examples** heading and the **Example user input** subheading, type the utterance ***turn the light on*** and press **Enter** to submit this utterance to the list.
-3. In the *turn the light on* utterance, select the word "light". Then in the list that appears, in the *Enter an entity name* box type **device** and select ***device* Create new entity**, as shown here:
+3. In the *turn the light on* utterance, select the word "light". Then in the list that appears, in the *Enter an entity name* box type **device** (in lower-case) and select ***device* Create new entity**, as shown here:
 
     ![The work "Light" is selected and a menu provides the option to search for or create an entity](./media/create-intent.png)
 
@@ -53,7 +53,7 @@ An *intent* is an action you want to perform - for example, you might want to sw
     ![Create an Machine learned entity named device ](./media/create-entity.png)
 
 5. Back in the page for the **switch_on** intent, create a second utterance with the phrase ***switch on the fan***. Then select the word "fan" and assign it to the **device** entity you created previously.
-6. In the pane on the left, click **Intents** and verify that your **switch_on** intent is listed along with the default **None** intent, Then click **Create** and add a new intent with the name **switch_off**.
+6. In the pane on the left, click **Intents** and verify that your **switch_on** intent is listed along with the default **None** intent, Then click **Create** and add a new intent with the name **switch_off** (in lower-case).
 7. In the page for the **switch_off** intent, add the utterance ***turn the light off*** and assign the word "light" to the **device** entity.
 8. Add a second utterance to the **switch_off** intent, with the utterance ***switch off the fan***. Then connect the word "fan" to the **device** entity.
 
@@ -83,7 +83,7 @@ To consume your language model from a client, we'll use a simple command-line ap
 
 ## Create a cloud shell
 
-Firs, you'll need a clioud shell in which to run the app.
+First, you'll need a cloud shell in which to run the app.
 
 1. Switch to the browser tab containing the Azure portal, and select the [**>_**] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.
 
@@ -112,7 +112,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **understand.ps1**. This file contains some code that uses your Custom Vision model to classify an image, as shown here:
 
-    ![The editor containing code to use a Language Understanding app](./media/classify-image-code.png)
+    ![The editor containing code to use a Language Understanding app](./media/understand-code.png)
 
 4. Don't worry too much about the details of the code, the important thing is that it needs the application ID, key, and endpoint URL for your published language model. Copy these from the **Manage** page in th Language Understanding portal (which should still be open in another browser tab) and paste them into the code editor, replacing the **YOUR_APP_ID**, **YOUR_PRIMARY_KEY** and **YOUR_ENDPOINT_URL** placeholder values respectively.
 
@@ -125,8 +125,18 @@ Now that you have a cloud shell environment, you can run a simple client applica
     ```
 
 5. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
-7. In the PowerShell pane, enter the following command to run the code:
+6. In the PowerShell pane, enter the following command to run the code:
 
     ```
-    .ai-900\understand.ps1 "Turn on the light"
+    .\ai-900\understand.ps1 "Turn on the light"
     ```
+
+7. Review the results - the app should have predicted that the intended action is to switch on the light.
+8. Now try another command:
+
+    ```
+    .\ai-900\understand.ps1 "Switch the fan off"
+    ```
+
+9. Review the results from this command- the app should have predicted that the intended action is to switch off the fan.
+10. Experiment with a few more commands; including commands that the model was not trained to support, such as "Hello" or "switch on the oven". The app should generally understand commands for which its language model is defined, and fail gracefully for other input.

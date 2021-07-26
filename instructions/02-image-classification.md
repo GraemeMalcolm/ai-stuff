@@ -103,14 +103,14 @@ Now that you have a cloud shell environment, you can run a simple client applica
 1. In the command shell, enter the following command to download the sample application.
 
     ```
-    git clone https://github.com/GraemeMalcolm/ai-stuff
+    git clone https://github.com/GraemeMalcolm/ai-stuff ai-900
     ```
 
-2. The files are downloaded to a folder named **ai-stuff**. To see all of the files in your cloud shell storage, select the **{ }** (*Open editor*) icon on the bar at the top of the cloud shell pane. This opens an additional editor pane above the cloud shell pane, like this:
+2. The files are downloaded to a folder named **ai-900**. To see all of the files in your cloud shell storage, select the **{ }** (*Open editor*) icon on the bar at the top of the cloud shell pane. This opens an additional editor pane above the cloud shell pane, like this:
 
     ![Azure cloud shell editor](./media/editor-pane.png)
 
-3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-stuff** and select **classify-image.ps1**. This file contains some code that uses your Custom Vision model to classify an image, as shown here:
+3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **classify-image.ps1**. This file contains some code that uses your Custom Vision model to classify an image, as shown here:
 
     ![The editor containing code to classify an image](./media/classify-image-code.png)
 
@@ -134,8 +134,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 6. In the PowerShell pane, enter the following commands to run the code:
 
     ```
-    cd ai-stuff
-    .\classify-image.ps1 1
+    .\ai-900\classify-image.ps1 1
     ```
 
 7. Review the prediction, which should be **apple**.
@@ -143,7 +142,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 8. Now let's try another image:
 
     ```
-    .\classify-image.ps1 2
+    .\ai-900\classify-image.ps1 2
     ```
 
 9. Verify that the model classifies this image as **banana**.
@@ -151,7 +150,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 10. Finally, let's try the third test image:
 
     ```
-    .\classify-image.ps1 3
+    .\ai-900\classify-image.ps1 3
     ```
 
 11. Verify that the model classifies this image as **orange**.
