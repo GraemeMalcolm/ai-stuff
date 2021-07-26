@@ -71,7 +71,7 @@ Now you're ready to use the intents and entities you have defined to train the l
 
 ### Publish the Model and Configure Endpoints
 
-To use your trained model in a client application, you must publish it as an endpoint to which the client applications can send new utterances; from which intents and entitites will be predicted.
+To use your trained model in a client application, you must publish it as an endpoint to which the client applications can send new utterances; from which intents and entities will be predicted.
 
 1. At the top of the Language Understanding page for your app, click **Publish**. Then select **Production slot** and click **Done**.
 2. After the model has been published, at the top of the Language Understanding page for your app, click **Manage**. Then on the **Settings** tab, note the **Application ID** for your app. You will need this value later.
