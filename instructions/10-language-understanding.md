@@ -3,6 +3,7 @@ lab:
     title: 'Understand Language'
     module: 'Module 3: Explore Natural Language Processing'
 ---
+
 # Understand Language
 
 Increasingly, we expect computers to be able to use AI in order to understand spoken or typed commands in natural language. For example, you might want to implement a home automation system that enables you to control devices in your home by using voice commands such as "switch on the light" or "put the fan on", and have an AI-powered device understand the command and take appropriate action.
