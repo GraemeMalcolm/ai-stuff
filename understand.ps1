@@ -1,7 +1,7 @@
 
 $appId="YOUR_APP_ID"
-$endpointUrl="YOUR_ENDPOINT_URL"
 $key = "YOUR_PRIMARY_KEY"
+$endpointUrl="YOUR_ENDPOINT_URL"
 
 
 
@@ -10,8 +10,8 @@ if ($args.count -gt 0){
     $utterance = $args[0].ToString()
     $url = "$($endpointUrl)/luis/prediction/v3.0/apps/$($appId)/slots/production/predict?subscription-key=$($key)&query=$($utterance)"
     $result = Invoke-RestMethod -Method Get -Uri $url
-    $predictedIntent = $result.prediction.topIntent
-    $predictedDevice = $result.prediction.entities.device
+    $predictedIntent = $result.prediction.topIntent.ToLower()
+    $predictedDevice = $result.prediction.entities.device.ToLower()
     if($predictedDevice -in ("light","fan")){
         if($predictedIntent -eq "switch_on"){
             Write-Host "$predictedDevice on" -BackgroundColor Yellow -ForegroundColor Black
