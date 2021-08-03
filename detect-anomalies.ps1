@@ -17,7 +17,7 @@ $result = Invoke-RestMethod -Method Post `
 
 # Process results
 for ($i = 0 ; $i -lt $result.expectedValues.count ; $i++){
-    $c = "black"
+    $c = "white"
     if ($result.isAnomaly[$i] -eq "True"){
         $c = "red"
     }

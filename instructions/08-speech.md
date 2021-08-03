@@ -83,7 +83,8 @@ Now that you have a cloud shell environment, you can run a simple client applica
 6. In the PowerShell pane, enter the following command to run the code:
 
     ```
-    .\ai-900\speaking-clock.ps1
+    cd ai-900
+    .\speaking-clock.ps1
     ```
 
 7. Review the output, which should have successfully recognized the text "What time is it?" and saved an appropriate response in a file named *output.wav*.

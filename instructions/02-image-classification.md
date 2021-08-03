@@ -134,7 +134,8 @@ Now that you have a cloud shell environment, you can run a simple client applica
 6. In the PowerShell pane, enter the following commands to run the code:
 
     ```
-    .\ai-900\classify-image.ps1 1
+    cd ai-900
+    .\classify-image.ps1 1
     ```
 
 7. Review the prediction, which should be **apple**.
@@ -142,7 +143,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 8. Now let's try another image:
 
     ```
-    .\ai-900\classify-image.ps1 2
+    .\classify-image.ps1 2
     ```
 
 9. Verify that the model classifies this image as **banana**.
@@ -150,7 +151,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 10. Finally, let's try the third test image:
 
     ```
-    .\ai-900\classify-image.ps1 3
+    .\classify-image.ps1 3
     ```
 
 11. Verify that the model classifies this image as **orange**.

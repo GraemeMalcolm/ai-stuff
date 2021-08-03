@@ -71,10 +71,11 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     The sample client application will use your Anomaly Detector service to analyze a file containing a series of date/times and numeric values.
 
-6. In the PowerShell pane, enter the following command to run the code:
+6. In the PowerShell pane, enter the following commands to run the code:
 
     ```
-    .\ai-900\detect-anomalies.ps1
+    cd ai-900
+    .\detect-anomalies.ps1
     ```
 
 7. Review the results, noting that the final column in the results is True or False to indicate if the value is considered an anomaly:

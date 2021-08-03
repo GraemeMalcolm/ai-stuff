@@ -76,10 +76,11 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/store-cam1.jpg)
 
-6. In the PowerShell pane, enter the following command to run the code:
+6. In the PowerShell pane, enter the following commands to run the code:
 
     ```
-    .\ai-900\analyze-image.ps1 store-cam1.jpg
+    cd ai-900
+    .\analyze-image.ps1 store-cam1.jpg
     ```
 
 7. Review the results of the image analysis, which include:
@@ -94,7 +95,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
     To analyze the second image, enter the following command:
 
     ```
-    .\ai-900\analyze-image.ps1 store-cam2.jpg
+    .\analyze-image.ps1 store-cam2.jpg
     ```
 
 9. Review the results of the image analysis for the second image.
@@ -106,7 +107,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
     To analyze the third image, enter the following command:
 
     ```
-    .\ai-900\analyze-image.ps1 store-cam3.jpg
+    .\analyze-image.ps1 store-cam3.jpg
     ```
 
 11. Review the results of the image analysis for the third image.

@@ -126,17 +126,18 @@ Now that you have a cloud shell environment, you can run a simple client applica
     ```
 
 5. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
-6. In the PowerShell pane, enter the following command to run the code:
+6. In the PowerShell pane, enter the following comman to run the code:
 
     ```
-    .\ai-900\understand.ps1 "Turn on the light"
+    cd ai-900
+    .\understand.ps1 "Turn on the light"
     ```
 
 7. Review the results - the app should have predicted that the intended action is to switch on the light.
 8. Now try another command:
 
     ```
-    .\ai-900\understand.ps1 "Switch the fan off"
+    .\understand.ps1 "Switch the fan off"
     ```
 
 9. Review the results from this command- the app should have predicted that the intended action is to switch off the fan.
