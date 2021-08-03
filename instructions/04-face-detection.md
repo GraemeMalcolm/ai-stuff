@@ -13,7 +13,7 @@ Computer vision solutions often require an artificial intelligence (AI) solution
 Let's start by creating a **Face** resource in your Azure subscription:
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
-2. Click the **&#65291;Create a resource** button, search for *Computer Vision*, and create a **Computer Vision** resource with the following settings:
+2. Click the **&#65291;Create a resource** button, search for *Face*, and create a **Face** resource with the following settings:
     - **Subscription**: *Your Azure subscription*.
     - **Resource group**: *Select an existing resource group or create a new one*.
     - **Region**: *Choose any available region*
@@ -22,11 +22,11 @@ Let's start by creating a **Face** resource in your Azure subscription:
     - **Notices**: *Scroll down if necessary, and select any required checkbox for notices relevant to your selected region*.
 
 3. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
-4. View the **Keys and Endpoint** page for your Computer Vision resource. You will need the endpoint and keys to connect from client applications.
+4. View the **Keys and Endpoint** page for your Face resource. You will need the endpoint and keys to connect from client applications.
 
 ## Create a cloud shell
 
-To test the capabilities of the Computer Vision service, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.
+To test the capabilities of the Face service, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.
 
 1. In the Azure portal, select the [**>_**] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.
 
@@ -41,7 +41,7 @@ To test the capabilities of the Computer Vision service, we'll use a simple comm
 
 ## Configure and run a client application
 
-Now that you have a cloud shell environment, you can run a simple client application that uses the Computer Vision service to analyze an image.
+Now that you have a cloud shell environment, you can run a simple client application that uses the Face service to analyze an image.
 
 1. In the command shell, enter the following command to download the sample application.
 
