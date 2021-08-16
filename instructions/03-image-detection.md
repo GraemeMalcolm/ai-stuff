@@ -116,7 +116,7 @@ To consume your custom vision model from a client, we'll use a simple command-li
 
 Now that you have a cloud shell environment, you can run a simple client application that uses the Computer Vision service to analyze an image.
 
-1. In the command shell, enter the following command to download the sample application.
+1. If you have not done so already, in the command shell, enter the following command to download the sample application. **Note**: If you have already downlowned the folder, proceed to the next step. 
 
     ```
     git clone https://github.com/GraemeMalcolm/ai-stuff ai-900
