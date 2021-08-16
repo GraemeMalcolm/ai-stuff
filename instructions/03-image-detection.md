@@ -143,7 +143,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     You will use the sample client application to classify the following image:
 
-    ![An image of an fruit](./media/produce.jpg)
+    ![An image of an fruit](../data/vision/produce.jpg)
 
 6. In the PowerShell pane, enter the following command to run the code:
 
