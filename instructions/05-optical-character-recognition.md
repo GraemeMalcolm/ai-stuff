@@ -1,32 +1,42 @@
 ---
 lab:
-    title: 'Analyze Faces with the Face Service'
+    title: 'Analyze Text in Images with OCR'
     module: 'Module 1: Explore Computer Vision'
 ---
 
-# Analyze Faces with the Face Service
+# Analyze Text in Images with Optical Character Recognition
 
-Computer vision solutions often require an artificial intelligence (AI) solution to be able to detect, analyze, or identify human faces. or example, suppose the retail company Northwind Traders has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. One way to accomplish this is to perform facial detection and analysis - in other words, determine if there are any faces in the images, and if so analyze their features.
+A common computer vision challenge is to detect and interpret text in an image. This kind of processing is often referred to as *optical character recognition* (OCR).
 
-## Create a *Face* resource
+## Use the Computer Vision Service to Read Text in an Image
 
-Let's start by creating a **Face** resource in your Azure subscription:
+The **Computer Vision** cognitive service provides support for OCR tasks, including:
 
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
-2. Click the **&#65291;Create a resource** button, search for *Face*, and create a **Face** resource with the following settings:
+- An **OCR** API that you can use to read text in multiple languages. This API can be used synchronously, and works well when you need to detect and read a small amount of text in an image.
+- A **Read** API that is optimized for larger documents. This API is used asynchronously, and can be used for both printed and handwritten text.
+
+You can use this service by creating either a **Computer Vision** resource or a **Cognitive Services** resource.
+
+If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
+
+> **Note**: If you already have a Cognitive Services resource, just open its **Quick start** page in the Azure portal and copy its key and endpoint to the cell below. Otherwise, follow the steps below to create one.
+
+1. In another browser tab, open the Azure portal at https://portal.azure.com, and sign in with your Microsoft account.
+
+2. Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Your Azure subscription*.
-    - **Resource group**: *Select an existing resource group or create a new one*.
-    - **Region**: *Choose any available region*
+    - **Resource group**: *Select or create a resource group with a unique name*.
+    - **Region**: *Choose any available region*:
     - **Name**: *Enter a unique name*.
-    - **Pricing tier**: Free F0
-    - **Notices**: *Scroll down if necessary, and select any required checkbox for notices relevant to your selected region*.
+    - **Pricing tier**: S0
+    - **I confirm I have read and understood the notices**: Selected.
 
 3. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
 4. View the **Keys and Endpoint** page for your Face resource. You will need the endpoint and keys to connect from client applications.
 
 ## Create a cloud shell
 
-To test the capabilities of the Face service, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.
+To test the capabilities of OCR with Cognitive Services, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.
 
 1. In the Azure portal, select the [**>_**] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.
 
