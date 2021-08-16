@@ -128,7 +128,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **detect-image.ps1**. This file contains some code that uses your Custom Vision model to classify an image, as shown here:
 
-    ![The editor containing code to detect items in an image](./media/NEED NEW IMAGE.png)
+    ![The editor containing code to detect items in an image](./media/detect-image-code.png)
 
 4. Don't worry too much about the details of the code, the important thing is that it needs the prediction URL and key for your Custom Vision model when using an image URL. Copy these from the prediction URL dialog box in your Custom Vision project (which should still be open in another browser tab) and paste them into the code editor, replacing the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY** placeholder values respectively.
 
@@ -152,7 +152,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
     .\detect-image.ps1 
     ```
 
-7. Review the prediction, which should be **NEED PREDICTION**.
+7. Review the prediction, which should be *apple orange banana**.
 
 ## Learn more
 

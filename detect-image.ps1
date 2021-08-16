@@ -21,4 +21,14 @@ $result = Invoke-RestMethod -Method Post `
 
 $prediction = $result | ConvertFrom-Json
 
-Write-Host ("`n",$prediction.predictions[0].tagName, "`n")
+$items = $prediction.predictions
+
+$testArray = [System.Collections.ArrayList]@()
+foreach ($item in $items) 
+{if ($item.probability -gt .9)
+{
+    $arrayID = $testArray.Add($item.tagName)
+}
+}
+
+Write-Host ("`n",$testArray, "`n")
