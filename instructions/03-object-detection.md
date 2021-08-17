@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Detect images with the Custom Vision Service'
+    title: 'Detect objects with the Custom Vision Service'
     module: 'Module 1: Explore Computer Vision'
 ---
 
@@ -53,6 +53,7 @@ To train an object detection model, you need to upload images that contain the c
 ![Upload downloaded images by clicking add images.](./media/fruit-upload.jpg)
 
 3. After the images have been uploaded, select the first one to open it.
+
 4. Hold the mouse over any object in the image until an automatically detected region is displayed like the image below. Then select the object, and if necessary resize the region to surround it.
 
 ![The default region for an object](./media/object-region.jpg)
@@ -81,13 +82,14 @@ Now that you've tagged the images in your project, you're ready to train a model
 2. Wait for training to complete (it might take ten minutes or so), and then review the *Precision*, *Recall*, and *mAP* performance metrics - these measure the prediction accuracy of the classification model, and should all be high.
 3. At the top right of the page, click **Quick Test**, and then in the **Image URL** box, enter `https://aka.ms/apple-orange` and view the prediction that is generated. Then close the **Quick Test** window.
 
-## Publish the image detection model
+## Publish the object detection model
 
 Now you're ready to publish your trained model and use it from a client application.
 
 9. Click **&#128504; Publish** to publish the trained model with the following settings:
     - **Model name**: detect-produce
     - **Prediction Resource**: *The resource you created previously*.
+
 10. After publishing, click the *Prediction URL* (&#127760;) icon to see information required to use the published model, which should look like this:
 
     ![Prediction URL information for a custom vision model](./media/custom-vision-url.png)
@@ -103,6 +105,7 @@ To consume your custom vision model from a client, we'll use a simple command-li
     ![Azure cloud shell pane](./media/cloud-shell.png)
 
 2. The first time you open the cloud shell, you will be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**.
+
 3. If you are prompted to create storage for your cloud shell, ensure your subscription is specified and select **Create storage**. Then wait a minute or so for the storage to be created. Eventually, the cloud shell pane will display a command prompt like this:
 
     ![Azure cloud shell PowerShell prompt](./media/powershell-prompt.png)
@@ -111,9 +114,9 @@ To consume your custom vision model from a client, we'll use a simple command-li
 
 ## Configure and run a client application
 
-Now that you have a cloud shell environment, you can run a simple client application that uses the Computer Vision service to analyze an image.
+Now that you have a cloud shell environment, you can run a simple client application that uses the Computer Vision service to adetect objects.
 
-1. If you have not done so already, in the command shell, enter the following command to download the sample application. **Note**: If you have already downloaded the folder, proceed to the next step. 
+1. In the command shell, enter the following command to download the sample application.  
 
     ```
     git clone https://github.com/GraemeMalcolm/ai-stuff ai-900
@@ -123,7 +126,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ![Azure cloud shell editor](./media/editor-pane.png)
 
-3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **detect-image.ps1**. This file contains some code that uses your Custom Vision model to classify an image, as shown here:
+3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **detect-objects.ps1**. This file contains some code that uses your Custom Vision model to detect objects an image, as shown here:
 
     ![The editor containing code to detect items in an image](./media/detect-image-code.png)
 
@@ -139,7 +142,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 5. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
 
-    You will use the sample client application to classify the following image:
+    You will use the sample client application to detect objects in this image:
 
     ![An image of an fruit](../data/vision/produce.jpg)
 
@@ -147,7 +150,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ```
     cd ai-900
-    .\detect-image.ps1 
+    .\detect-objects.ps1 
     ```
 
 7. Review the prediction, which should be *apple orange banana**.
