@@ -12,26 +12,23 @@ For example, a grocery store might use an object detection model to implement an
 
 The **Custom Vision** cognitive service in Microsoft Azure provides a cloud-based solution for creating and publishing custom object detection models.
 
-## Create a Custom Vision resource
+## Create a Cognitive Services resource
 
-To use the Custom Vision service, you need an Azure resource that you can use to train a model, and a resource with which you can publish it for applications to use. You can use the same resource for each of these tasks, or you can use different resources for each to allocate costs separately provided both resources are created in the same region. The resource for either (or both) tasks can be a general **Cognitive Services** resource, or a specific **Custom Vision** resource. Use the following instructions to create a new **Custom Vision** resource (or you can use an existing resource if you have one).
+To use the Custom Vision service, you need an Azure resource that you can use to train a model, and a resource with which you can publish it for applications to use. You can use the same resource for each of these tasks, or you can use different resources for each to allocate costs separately provided both resources are created in the same region. The resource for either (or both) tasks can be a general **Cognitive Services** resource, or a specific **Custom Vision** resource. Use the following instructions to create a new **Cognitive Services** resource (or you can use an existing resource if you have one).
 
-Use the following instructions to create a new **Custom Vision** resource.
+Use the following instructions to create a new **Cognitive Services** resource.
 
 1. In a new browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com), and sign in using the Microsoft account associated with your Azure subscription.
-2. Select the **&#65291;Create a resource** button, search for *custom vision*, and create a **Custom Vision** resource with the following settings:
-    - **Create options**: Both
-    - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Create a new resource group with a unique name*
-    - **Name**: *Enter a unique name*
-    - **Training location**: *Choose any available region*
-    - **Training pricing tier**: Free F0
-    - **Prediction location**: *The same region as the training resource*
-    - **Prediction pricing tier**: Free F0
 
-    > **Note**: If you already have an F0 custom vision service in your subscription, select **S0** for this one.
+2. Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
+    - **Subscription**: *Your Azure subscription*.
+    - **Resource group**: *Select or create a resource group with a unique name*.
+    - **Region**: *Choose any available region*:
+    - **Name**: *Enter a unique name*.
+    - **Pricing tier**: S0
+    - **I confirm I have read and understood the notices**: Selected.
 
-3. Wait for the resources to be created, and note that two Custom Vision resources are provisioned; one for training, and another for prediction. You can view these by navigating to the resource group where you created them.
+3. Wait for the resources to be created. You can view it by navigating to the resource group where you created it.
 
 ## Create a Custom Vision project
 
@@ -41,7 +38,7 @@ To train an object detection model, you need to create a Custom Vision project b
 2. Create a new project with the following settings:
     - **Name**: Grocery Detection
     - **Description**: Object detection for groceries.
-    - **Resource**: *The Custom Vision resource you created previously*
+    - **Resource**: *The resource you created previously*
     - **Project Types**: Object Detection
     - **Domains**: General
 3. Wait for the project to be created and opened in the browser.
@@ -90,7 +87,7 @@ Now you're ready to publish your trained model and use it from a client applicat
 
 9. Click **&#128504; Publish** to publish the trained model with the following settings:
     - **Model name**: detect-produce
-    - **Prediction Resource**: *The prediction resource you created previously*.
+    - **Prediction Resource**: *The resource you created previously*.
 10. After publishing, click the *Prediction URL* (&#127760;) icon to see information required to use the published model, which should look like this:
 
     ![Prediction URL information for a custom vision model](./media/custom-vision-url.png)
@@ -116,7 +113,7 @@ To consume your custom vision model from a client, we'll use a simple command-li
 
 Now that you have a cloud shell environment, you can run a simple client application that uses the Computer Vision service to analyze an image.
 
-1. If you have not done so already, in the command shell, enter the following command to download the sample application. **Note**: If you have already downlowned the folder, proceed to the next step. 
+1. If you have not done so already, in the command shell, enter the following command to download the sample application. **Note**: If you have already downloaded the folder, proceed to the next step. 
 
     ```
     git clone https://github.com/GraemeMalcolm/ai-stuff ai-900
@@ -131,7 +128,8 @@ Now that you have a cloud shell environment, you can run a simple client applica
     ![The editor containing code to detect items in an image](./media/detect-image-code.png)
 
 4. Don't worry too much about the details of the code, the important thing is that it needs the prediction URL and key for your Custom Vision model when using an image URL. Copy these from the prediction URL dialog box in your Custom Vision project (which should still be open in another browser tab) and paste them into the code editor, replacing the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY** placeholder values respectively.
-
+    
+    ![The prediction key is found under the prediction url in the dialogue box.](./media/example-prediction-url.png)
     After pasting the endpoint and key values, the first two lines of code should look similar to this:
 
     ```PowerShell
