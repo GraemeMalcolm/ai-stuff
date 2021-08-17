@@ -43,6 +43,7 @@ To test the capabilities of OCR with Cognitive Services, we'll use a simple comm
     ![Azure cloud shell pane](./media/cloud-shell.png)
 
 2. The first time you open the cloud shell, you will be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**.
+
 3. If you are prompted to create storage for your cloud shell, ensure your subscription is specified and select **Create storage**. Then wait a minute or so for the storage to be created. Eventually, the cloud shell pane will display a command prompt like this:
 
     ![Azure cloud shell PowerShell prompt](./media/powershell-prompt.png)
@@ -63,9 +64,9 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ![Azure cloud shell editor](./media/editor-pane.png)
 
-3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **find-faces.ps1**. This file contains some code that uses the Face service to detect and analyze faces in an image, as shown here:
+3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **ocr.ps1**. This file contains some code that uses the Face service to detect and analyze faces in an image, as shown here:
 
-    ![The editor containing code to detect faces in an image](./media/find-faces.png)
+    ![The editor containing code to analyze text in images.](./media/NEED IMAGE.png)
 
 4. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Face resource. Copy these from the **Keys and Endpoints** page for your resource (which should still be in the top area of the browser) and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
 
@@ -78,52 +79,51 @@ Now that you have a cloud shell environment, you can run a simple client applica
     $key="1a2b3c4d5e6f7g8h9i0j...."
     ```
 
-5. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
+5. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**. Now that you've set up the key and endpoint, you can use your computer vision service resource to extract text from an image.
 
-    The sample client application will use your Face service to analyze the following image, taken by a camera in the Northwind Traders store:
+    Let's start with the **OCR** API, which enables you to synchronously analyze an image and read any text it contains. In this case, you have an advertising image for the fictional Northwind Traders retail company that includes some text.
 
-    ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/store-cam1.jpg)
+    The sample client application will analyze the following image:
 
-6. In the PowerShell pane, enter the following commands to run the code:
+    ![An image of an advertisement for Northwind Traders grocery store.](./media/advert.jpg)
+
+6. In the PowerShell pane, enter the following commands to run the code to read the text:
 
     ```
     cd ai-900
-    .\find-faces.ps1 store-cam1.jpg
+    .\ocr.ps1 advert.jpg
     ```
 
-7. Review the details of the faces found in the image, which include:
-    - The location of the face in the image
-    - The approximate age of the person
-    - An indication of the emotional state of the person (based on proportional scores for a range of emotions)
+7. Review the details found in the image. The text found in the image is organized into a hierarchical structure of regions, lines, and words, and the code reads these to retrieve the results.
 
-    Note that the location of a face is indicated by the top- left coordinates, and the width and height of a *bounding box*, as shown here:
+    Note that the location of text is indicated by the top- left coordinates, and the width and height of a *bounding box*, as shown here:
 
-    ![An image of a person with their face outlined](./media/store-cam1-face.jpg)
+    ![An image of the text in the image outlined](./media/NEED IMAGE.jpg)
 
 8. Now let's try another image:
 
-    ![An image of person with a shopping basket](./media/store-cam2.jpg)
+    ![An image of a typed letter.](./media/letter.jpg)
 
     To analyze the second image, enter the following command:
 
     ```
-    .\find-faces.ps1 store-cam2.jpg
+    .\ocr.ps1 letter.jpg
     ```
 
-9. Review the results of the face analysis for the second image.
+9. Review the results of the analysis for the second image.
 
 10. Let's try one more:
 
-    ![An image of person with a shopping cart](./media/store-cam3.jpg)
+    ![An image of a handwritten note.](./media/note.jpg)
 
     To analyze the third image, enter the following command:
 
     ```
-    .\find-faces.ps1 store-cam3.jpg
+    .\ocr.ps1 note.jpg
     ```
 
-11. Review the results of the face analysis for the third image.
+11. Review the results of the analysis for the third image.
 
 ## Learn more
 
-This simple app shows only some of the capabilities of the Face service. To learn more about what you can do with this service, see the [Face page](https://azure.microsoft.com/services/cognitive-services/face/).
+This simple app shows only some of the capabilities of the Face service. To learn more about what you can do with this service, see the [OCR page](https://docs.microsoft.com/azure/cognitive-services/computer-vision/overview-ocr).
