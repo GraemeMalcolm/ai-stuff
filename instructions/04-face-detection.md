@@ -43,7 +43,7 @@ To test the capabilities of the Face service, we'll use a simple command-line ap
 
 Now that you have a cloud shell environment, you can run a simple client application that uses the Face service to analyze an image.
 
-1. In the command shell, enter the following command to download the sample application.
+1. If you have not done so already, in the command shell, enter the following command to download the sample application. **Note**: If you have already downloaded the folder, proceed to the next step. 
 
     ```
     git clone https://github.com/GraemeMalcolm/ai-stuff ai-900
