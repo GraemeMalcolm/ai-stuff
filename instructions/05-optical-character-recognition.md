@@ -54,7 +54,7 @@ To test the capabilities of OCR with Cognitive Services, we'll use a simple comm
 
 Now that you have a cloud shell environment, you can run a simple client application that uses the Face service to analyze an image.
 
-1. If you have not done so already, in the command shell, enter the following command to download the sample application. **Note**: If you have already downloaded the folder, proceed to the next step. 
+1. In the command shell, enter the following command to download the sample application. 
 
     ```
     git clone https://github.com/GraemeMalcolm/ai-stuff ai-900
