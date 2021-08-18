@@ -85,7 +85,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     The sample client application will analyze the following image:
 
-    ![An image of an advertisement for Northwind Traders grocery store.](./data/vision/advert.jpg)
+    ![An image of an advertisement for Northwind Traders grocery store.](../data/vision/advert.jpg)
 
 6. In the PowerShell pane, enter the following commands to run the code to read the text:
 
@@ -102,7 +102,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 8. Now let's try another image:
 
-    ![An image of a typed letter.](./data/vision/letter.jpg)
+    ![An image of a typed letter.](../data/vision/letter.jpg)
 
     To analyze the second image, enter the following command:
 
@@ -114,7 +114,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 10. Let's try one more:
 
-    ![An image of a handwritten note.](./data/vision/note.jpg)
+    ![An image of a handwritten note.](../data/vision/note.jpg)
 
     To analyze the third image, enter the following command:
 
