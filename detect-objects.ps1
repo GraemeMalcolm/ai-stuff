@@ -23,12 +23,12 @@ $prediction = $result | ConvertFrom-Json
 
 $items = $prediction.predictions
 
-$testArray = [System.Collections.ArrayList]@()
+$objectArray = [System.Collections.ArrayList]@()
 foreach ($item in $items) 
 {if ($item.probability -gt .9)
 {
-    $arrayID = $testArray.Add($item.tagName)
+    $objectArray.Add($item.tagName)
 }
 }
 
-Write-Host ("`n",$testArray, "`n")
+Write-Host ("`n",$objectArray, "`n")
