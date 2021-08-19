@@ -79,13 +79,13 @@ In the ILT - we should include a demo (on the assumption that the trainer has an
     - **Resource group**: *The resource group containing your QnA Maker resource*
     - **Location**: *The same location as your QnA Maker service*.
     - **Pricing tier**: Free F0
-    - **App name**: *Same as the **Bot handle** with *.azurewebsites.net* appended automatically
+    - **App name**: *Same as the **Bot handle** with **.azurewebsites.net** appended automatically*
     - **SDK language**: *Choose either C# or Node.js*
     - **QnA Auth Key**: *This should automatically be set to the authentication key for your QnA knowledge base*
     - **App service plan/location**: *This should be set automatically to a suitable plan and location. If not, create a new plan.*
     - **Application Insights**: Off
     - **Microsoft App ID and password**: Auto create App ID and password.
-4. Wait for your bot to be created (the notification icon at the top right, which looks like a bell, will be animated while you wait). Then in the notification that deployment has completed, click **Go to resource** (or alternatively, on the home page, click **Resource groups*, open the resource group where you created the web app bot, and click it.)
+4. Wait for your bot to be created (the notification icon at the top right, which looks like a bell, will be animated while you wait). Then in the notification that deployment has completed, click **Go to resource** (or alternatively, on the home page, click **Resource groups**, open the resource group where you created the web app bot, and click it.)
 5. In the left-hand pane of your bot look for **Settings**, click on **Test in Web Chat**, and wait until the bot displays the message **Hello and welcome!** (it may take a few seconds to initialize).
 6. Use the test chat interface to ensure your bot answers questions from your knowledge base as expected. For example, try submitting *I need to cancel my hotel*.
 
