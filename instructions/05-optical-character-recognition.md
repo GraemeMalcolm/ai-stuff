@@ -66,7 +66,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **ocr.ps1**. This file contains some code that uses the Computer Vision service to detect and analyze text in an image, as shown here:
 
-    ![The editor containing code to analyze text in images.](./media/NEED IMAGE.png)
+    ![The editor containing code to analyze text in images.](./media/ocr-code.png)
 
 4. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Computer Vision resource. Copy these from the **Keys and Endpoints** page for your resource (which should still be in the top area of the browser) and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
 
@@ -98,7 +98,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     Note that the location of text is indicated by the top- left coordinates, and the width and height of a *bounding box*, as shown here:
 
-    ![An image of the text in the image outlined](./media/NEED IMAGE.jpg)
+    ![An image of the text in the image outlined](./media/lab-05-bounding-boxes.png)
 
 8. Now let's try another image:
 
