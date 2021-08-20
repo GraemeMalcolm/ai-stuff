@@ -32,7 +32,7 @@ If you haven't already done so, create a **Cognitive Services** resource in your
     - **I confirm I have read and understood the notices**: Selected.
 
 3. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
-4. View the **Keys and Endpoint** page for your Face resource. You will need the endpoint and keys to connect from client applications.
+4. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
 ## Create a cloud shell
 
@@ -52,7 +52,7 @@ To test the capabilities of OCR with Cognitive Services, we'll use a simple comm
 
 ## Configure and run a client application
 
-Now that you have a cloud shell environment, you can run a simple client application that uses the Face service to analyze an image.
+Now that you have a cloud shell environment, you can run a simple client application that uses the Computer Vision service to analyze an image.
 
 1. In the command shell, enter the following command to download the sample application. 
 
@@ -64,11 +64,11 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ![Azure cloud shell editor](./media/editor-pane.png)
 
-3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **ocr.ps1**. This file contains some code that uses the Face service to detect and analyze faces in an image, as shown here:
+3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **ocr.ps1**. This file contains some code that uses the Computer Vision service to detect and analyze text in an image, as shown here:
 
     ![The editor containing code to analyze text in images.](./media/NEED IMAGE.png)
 
-4. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Face resource. Copy these from the **Keys and Endpoints** page for your resource (which should still be in the top area of the browser) and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
+4. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Computer Vision resource. Copy these from the **Keys and Endpoints** page for your resource (which should still be in the top area of the browser) and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
 
     >**Tip**: You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
 
@@ -79,7 +79,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
     $key="1a2b3c4d5e6f7g8h9i0j...."
     ```
 
-5. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**. Now that you've set up the key and endpoint, you can use your computer vision service resource to extract text from an image.
+5. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**. Now that you've set up the key and endpoint, you can use your Cognitive Services resource to extract text from an image.
 
     Let's start with the **OCR** API, which enables you to synchronously analyze an image and read any text it contains. In this case, you have an advertising image for the fictional Northwind Traders retail company that includes some text.
 
@@ -126,4 +126,4 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 ## Learn more
 
-This simple app shows only some of the capabilities of the Face service. To learn more about what you can do with this service, see the [OCR page](https://docs.microsoft.com/azure/cognitive-services/computer-vision/overview-ocr).
+This simple app shows only some of the OCR capabilities of the Computer Vision service. To learn more about what you can do with this service, see the [OCR page](https://docs.microsoft.com/azure/cognitive-services/computer-vision/overview-ocr).
