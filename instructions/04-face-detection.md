@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Analyze Faces with the Face Service'
-    module: 'Module 1: Explore Computer Vision'
+    module: 'Module 2: Explore Computer Vision'
 ---
 
 # Analyze Faces with the Face Service

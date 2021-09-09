@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Detect objects with the Custom Vision Service'
-    module: 'Module 1: Explore Computer Vision'
+    module: 'Module 2: Explore Computer Vision'
 ---
 
 # Detect images with the Custom Vision Service

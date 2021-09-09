@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Analyze Text in Images with OCR'
-    module: 'Module 1: Explore Computer Vision'
+    module: 'Module 2: Explore Computer Vision'
 ---
 
 # Analyze Text in Images with Optical Character Recognition

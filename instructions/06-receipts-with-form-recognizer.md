@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Analyze Receipts with Form Recognizer'
-    module: 'Module 1: Explore Computer Vision'
+    module: 'Module 2: Explore Computer Vision'
 ---
 
 # Analyzing Receipts with Form Recognizer 

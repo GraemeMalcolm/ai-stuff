@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Analyze an image with the Computer Vision Service'
-    module: 'Module 1: Explore Computer Vision'
+    module: 'Module 2: Explore Computer Vision'
 ---
 
 # Analyze an image with the Computer Vision Service

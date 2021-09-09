@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Classify images with the Custom Vision Service'
-    module: 'Module 1: Explore Computer Vision'
+    module: 'Module 2: Explore Computer Vision'
 ---
 
 # Classify images with the Custom Vision Service
