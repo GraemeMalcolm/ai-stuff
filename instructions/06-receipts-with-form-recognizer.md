@@ -10,6 +10,8 @@ In the artificial intelligence (AI) field of computer vision, optical character 
 
 A more advanced OCR scenario is the extraction of information from forms, such as purchase orders or invoices, with a semantic understanding of what the fields in the form represent. The **Form Recognizer** service is specifically designed for this kind of AI problem.
 
+Form Recognizer uses machine learning models trained to extract text from images of invoices, receipts, and more. While other computer vision models can capture text, Form Recognizer also captures the structure of the text, such as key/value pairs and information in tables. This way, instead of having to manually type in entries from a form into a database, you can automatically capture the relationships between text from the original file. 
+
 ## Create a Form Recognizer resource
 
 >**Note:** You can either use a Cognitive Service resource or a Form Recognizer resource to access Form Recognizer services. 
