@@ -80,9 +80,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 5. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
 
-    The sample client application will use Cognitive Services' Text Analytics service to give data on sentiment for reviews. 
-
-
+    The sample client application will use Cognitive Services' Text Analytics service to detect language, extract key phrases, determine sentiment, and extract known entities for reviews. 
 
 6. In the PowerShell pane, enter the following command to run the code:
 
