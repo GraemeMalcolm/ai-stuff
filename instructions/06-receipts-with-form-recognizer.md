@@ -34,6 +34,8 @@ To create a Form Recognizer resource in your Azure subscription:
 
 ## Create a cloud shell
 
+> **Note**: For this lab, you will test out an application in a cloud shell environment. When you build your own application, you can use an environment of your choice.
+
 To test the capabilities of Form Recognizer with Cognitive Services, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.
 
 1. In the Azure portal, select the [**>_**] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.

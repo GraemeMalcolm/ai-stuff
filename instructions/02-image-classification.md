@@ -83,6 +83,8 @@ Now you're ready to publish your trained model and use it from a client applicat
 
 ## Create a cloud shell
 
+> **Note**: For this lab, you will test out an application in a cloud shell environment. When you build your own application, you can use an environment of your choice.
+
 To consume your custom vision model from a client, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.
 
 1. Switch to the browser tab containing the Azure portal, and select the [**>_**] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.

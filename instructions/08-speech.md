@@ -27,7 +27,9 @@ Let's start by creating a **Speech** resource in your Azure subscription:
 
 ## Create a cloud shell
 
-To test the capabilities of the Speech service, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.
+> **Note**: For this lab, you will test out an application in a cloud shell environment. When you build your own application, you can use an environment of your choice.
+
+To test the capabilities of the Speech service, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.  
 
 1. In the Azure portal, select the [**>_**] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.
 

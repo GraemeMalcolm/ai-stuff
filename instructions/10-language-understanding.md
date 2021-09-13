@@ -84,7 +84,9 @@ To consume your language model from a client, we'll use a simple command-line ap
 
 ### Create a cloud shell
 
-First, you'll need a cloud shell in which to run the app.
+First, you'll need a cloud shell in which to run the app. 
+
+> **Note**: For this lab, you will test out an application in a cloud shell environment. When you build your own application, you can use an environment of your choice.
 
 1. Switch to the browser tab containing the Azure portal, and select the [**>_**] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.
 
