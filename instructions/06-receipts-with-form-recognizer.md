@@ -94,11 +94,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
     .\form-recognizer.ps1 
     ```
 
-7. Review the details found in the image. The text found in the image is organized into a hierarchical structure of regions, lines, and words, and the code reads these to retrieve the results.
-
-    Note that the location of text is indicated by the top- left coordinates, and the width and height of a *bounding box*, as shown here:
-
-    ![An image of the text in the image outlined](./media/lab-05-bounding-boxes.png)
+7. Review the returned results. See that Form Recognizer is able to interpret the data in the form, correctly identifying the merchant address and phone number, and the transaction date and time, as well as the line items, subtotal, tax, and total amounts.
 
 ## Learn more
 
