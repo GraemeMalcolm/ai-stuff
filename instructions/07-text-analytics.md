@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Recognize and Synthesize Speech'
+    title: 'Use Text Analytics'
     module: 'Module 3: Explore Natural Language Processing'
 ---
 
@@ -11,10 +11,6 @@ Natural Language Processing (NLP) is a branch of artificial intelligence (AI) th
 Microsoft Azure *cognitive services* includes the *Text Analytics* service, which provides some out-of-the-box NLP capabilities, including the identification of key phrases in text, and the classification of text based on sentiment.
 
 For example, suppose the fictional *Margie's Travel* organization encourages customers to submit reviews for hotel stays. You could use the Text Analytics service to summarize the reviews by extracting key phrases, determine which reviews are positive and which are negative, or analyze the review text for mentions of known entities such as locations or people.
-
-## View Review Documents
-
-Let's start by taking a look at some hotel reviews that have been left by customers.
 
 ## Create a Cognitive Services Resource
 
@@ -32,27 +28,21 @@ If you don't already have one, use the following steps to create a **Cognitive S
     - **Name**: *Enter a unique name*.
     - **Pricing tier**: S0
     - **I confirm I have read and understood the notices**: Selected.
+
 3. Wait for deployment to complete. Then go to your cognitive services resource, and on the **Overview** page, click the link to manage the keys for the service. You will need the endpoint and keys to connect to your cognitive services resource from client applications.
 
-### Get the Key and Endpoint for your Cognitive Services resource
-
-To use your cognitive services resource, client applications need its  endpoint and authentication key:
-
-1. In the Azure portal, on the **Keys and Endpoint** page for your cognitive service resource, copy the **Key1** for your resource and paste it in the code below, replacing **YOUR_COG_KEY**.
-2. Copy the **endpoint** for your resource and and paste it in the code below, replacing **YOUR_COG_ENDPOINT**.
-3. Run the code in the cell below by clicking its green <span style="color:green">&#9655</span> button.
-
-## Create a cloud shell 
+## Use the cloud shell 
 
 > **Note**: For this lab, you will test out an application in a cloud shell environment. When you build your own application, you can use an environment of your choice.
 
-To test the capabilities of the Speech service, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.  
+To test the capabilities of the Text Analytics service, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.  
 
 1. In the Azure portal, select the [**>_**] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.
 
     ![Azure cloud shell pane](./media/cloud-shell.png)
 
 2. The first time you open the cloud shell, you will be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**.
+
 3. If you are prompted to create storage for your cloud shell, ensure your subscription is specified and select **Create storage**. Then wait a minute or so for the storage to be created. Eventually, the cloud shell pane will display a command prompt like this:
 
     ![Azure cloud shell PowerShell prompt](./media/powershell-prompt.png)
@@ -73,9 +63,9 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ![Azure cloud shell editor](./media/editor-pane.png)
 
-3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **speaking-clock.ps1**. This file contains some code that uses the Speech service to recognize and synthesize speech:
+3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **analyze-text.ps1**. This file contains some code that uses the Speech service to recognize and synthesize speech:
 
-    ![The editor containing code to use the Speech service](./media/speaking-clock-code.png)
+    ![The editor containing code to use the Text Analytics service](./media/NEED IMAGE .png)
 
 4. Don't worry too much about the details of the code, the important thing is that it needs the region/location and either of the keys for your Speech resource. Copy these from the **Keys and Endpoints** page for your resource (which should still be in the top area of the browser) and paste them into the code editor, replacing the **YOUR_LOCATION** and **YOUR_KEY** placeholder values respectively.
 
@@ -92,12 +82,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     The sample client application will use your Speech service to transcribe spoken input and synthesize an appropriate spoken response. A real application would accept the input from a microphone and send the response to a speaker, but in this simple example, we'll use pre-recorded input in an audio file and save the response as another audio file.
 
-    Use the audio player below to hear the input audio the application will process:
 
-    <audio controls>
-      <source src="https://github.com/GraemeMalcolm/ai-stuff/raw/main/data/speech/time.wav" type="audio/wav">
-    Your browser does not support the audio element.
-    </audio>
 
 6. In the PowerShell pane, enter the following command to run the code:
 
