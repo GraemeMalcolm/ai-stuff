@@ -2,36 +2,119 @@ $endpoint="YOUR_ENDPOINT"
 $key="YOUR_KEY"
 
 # Code to call Text Analytics service to analyze sentiment in text
-# $txt_file = "review1.txt"
+$txt_file = "review1.txt"
+if ($args.count -gt 0 -And $args[0] -in ("review1.jpg", "review2.jpg", "review3.jpg", "review4.jpg"))
+{
+    $txt_file = $args[0]
+}
+$url = "https://raw.githubusercontent.com/GraemeMalcolm/ai-stuff/main/data/text/reviews/$txt_file"
 
-# $txt = "https://raw.githubusercontent.com/GraemeMalcolm/ai-stuff/main/data/text/reviews/$txt_file"
-
-$txt = "Good Hotel and staff`nThe Royal Hotel, London, UK`n3/2/2018`nClean rooms, good service, great location near Buckingham Palace and Westminster Abbey, and so on. We thoroughly enjoyed our stay. The courtyard is very peaceful and we went to a restaurant which is part of the same group and is Indian ( West coast so plenty of fish) with a Michelin Star. We had the taster menu which was fabulous. The rooms were very well appointed with a kitchen, lounge, bedroom and enormous bathroom. Thoroughly recommended."
+$txt =  (Invoke-webrequest -URI $url).Content
 
 $headers = @{}
 $headers.Add( "Ocp-Apim-Subscription-Key", $key )
 $headers.Add( "Content-Type","application/json" )
 
-$data = @{}
-$data.Add("id", "1")
-$data.Add("text", $txt)
-$data.Add("language", "en-US")
-$data | ConvertTo-Json
+# Language Detection
 
-#$body = "{$txt}"
+$data = @{
+    'documents' = @(
+        @{
+            "id" = "1"
+            "text" = "$txt"
+        }
+    )
+} | ConvertTo-Json
 
-Write-Host("`n$body`n")
+Write-Host("***Detecting Language***")
+$result = Invoke-RestMethod -Method Post `
+          -Uri "$endpoint/text/analytics/v3.1/languages" `
+          -Headers $headers `
+          -Body $data | ConvertTo-Json -Depth 6
 
-write-host "Analyzing text...`n"
+$analysis = ($result | ConvertFrom-Json)
+$langName = $analysis.documents.detectedLanguage.name
+$langCode = $analysis.documents.detectedLanguage.iso6391Name
+$langScore = $analysis.documents.detectedLanguage.confidenceScore
+
+Write-Host ("  - Language: $langName`n  - Code: $langCode`n  - Score: $langScore")
+
+# Key Phrases
+
+$data = @{
+    'documents' = @(
+        @{
+            "id" = "1"
+            "text" = "$txt"
+            "language" ="en-US"
+        }
+    )
+} | ConvertTo-Json
+
+write-host "`n`n***Finding Key Phrases***"
 $result = Invoke-RestMethod -Method Post `
           -Uri "$endpoint/text/analytics/v3.1/keyPhrases" `
           -Headers $headers `
           -Body $data | ConvertTo-Json -Depth 6
 
-# $analysis = ($result | ConvertFrom-Json)
+$analysis = ($result | ConvertFrom-Json)
 
-# Write-Host("`nLanguage Detected:")
-# foreach ($language in $analysis.documents)
-# {
-#     Write-Host ($language.detectedLanguage)
-# }
+$keyPhrases = $analysis.documents.keyPhrases
+
+Write-Host "  - Key Phrases: "
+foreach($keyPhrase in $keyPhrases) {
+    Write-Host ("    ", $keyPhrase)
+}
+
+# Sentiment
+
+$data = @{
+    'documents' = @(
+        @{
+            "id" = "1"
+            "text" = "$txt"
+        }
+    )
+} | ConvertTo-Json
+
+write-host "`n`n***Analyzing Sentiment***"
+$result = Invoke-RestMethod -Method Post `
+          -Uri "$endpoint/text/analytics/v3.1/sentiment" `
+          -Headers $headers `
+          -Body $data | ConvertTo-Json -Depth 6
+
+$analysis = ($result | ConvertFrom-Json)
+
+$sentiment = $analysis.documents.sentiment
+$positive = $analysis.documents.confidenceScores.positive
+$neutral = $analysis.documents.confidenceScores.neutral
+$negative = $analysis.documents.confidenceScores.negative
+
+Write-Host ("  - A $sentiment sentiment based on these scores:`n    - Positive: $positive`n    - Neutral: $neutral`n    - Negative: $negative")
+
+# Known Entities
+
+$data = @{
+    'documents' = @(
+        @{
+            "id" = "1"
+            "text" = "$txt"
+        }
+    )
+} | ConvertTo-Json
+
+write-host "`n`n***Identifying known entities***"
+$result = Invoke-RestMethod -Method Post `
+          -Uri "$endpoint/text/analytics/v3.1/entities/linking" `
+          -Headers $headers `
+          -Body $data | ConvertTo-Json -Depth 6
+
+$analysis = ($result | ConvertFrom-Json)
+
+$entities = $analysis.documents[0].entities
+
+foreach ($entity in $entities) {
+    $entityName = $entity.name 
+    $entityUrl = $entity.url 
+    Write-Host ("  - $entityName : $entityUrl")
+}
