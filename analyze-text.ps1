@@ -12,28 +12,26 @@ $headers = @{}
 $headers.Add( "Ocp-Apim-Subscription-Key", $key )
 $headers.Add( "Content-Type","application/json" )
 
-$body = "{ `
-    'documents': [ `
-      { `
-        'id': '0', `
-        'text': $txt, `
-        'language': 'en-US' `
-      } `
-    ] `
-  }"
+$data = @{}
+$data.Add("id", "1")
+$data.Add("text", $txt)
+$data.Add("language", "en-US")
+$data | ConvertTo-Json
 
-Write-Host("`n $body")
+#$body = "{$txt}"
+
+Write-Host("`n$body`n")
 
 write-host "Analyzing text...`n"
 $result = Invoke-RestMethod -Method Post `
           -Uri "$endpoint/text/analytics/v3.1/keyPhrases" `
           -Headers $headers `
-          -Body $body | ConvertTo-Json -Depth 6
+          -Body $data | ConvertTo-Json -Depth 6
 
-$analysis = ($result | ConvertFrom-Json)
+# $analysis = ($result | ConvertFrom-Json)
 
-Write-Host("`nLanguage Detected:")
-foreach ($language in $analysis.documents)
-{
-    Write-Host ($language.detectedLanguage)
-}
+# Write-Host("`nLanguage Detected:")
+# foreach ($language in $analysis.documents)
+# {
+#     Write-Host ($language.detectedLanguage)
+# }
