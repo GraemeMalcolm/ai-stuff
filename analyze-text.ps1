@@ -1,5 +1,5 @@
-$endpoint="https://sg-ai900-cogserv.cognitiveservices.azure.com/"
-$key="7c0aaae11c244068a364eed3187d1461"
+$endpoint="YOUR_ENDPOINT"
+$key="YOUR_KEY"
 
 # Code to call Text Analytics service to analyze sentiment in text
 # $txt_file = "review1.txt"
