@@ -46,7 +46,6 @@ $data = @{
         @{
             "id" = "1"
             "text" = "$txt"
-            "language" ="en-US"
         }
     )
 } | ConvertTo-Json
