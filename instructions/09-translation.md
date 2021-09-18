@@ -32,7 +32,9 @@ If you don't already have one, use the following steps to create a **Cognitive S
 To use your cognitive services resource, client applications need its authentication key and location:
 
 1. Wait for deployment to complete. Then go to your cognitive services resource, and on the **Overview** page, click the link to manage the keys for the service. You will need the endpoint and keys to connect to your cognitive services resource from client applications.
-2. View the **Keys and Endpoint** page for your Speech resource. You will need the location/region and keys to connect from client applications.
+2. View the **Keys and Endpoint** page for your Speech resource. You will need the **location/region** and keys to connect from client applications.
+
+**Note**: To use the Translator service you do not need to use the Cognitive Service endpoint. A global endpoint just for the Translator service is provided. 
 
 ## Create a cloud shell
 
@@ -73,7 +75,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     >**Tip**: You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
 
-    After pasting the endpoint and key values, the first two lines of code should look similar to this:
+    After pasting the location and key values, the first two lines of code should look similar to this:
 
     ```PowerShell
     $region="eastus"
