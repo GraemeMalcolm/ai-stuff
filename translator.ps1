@@ -56,7 +56,7 @@ $body = "[{'text': '$original_audio_text'}]"
 
 write-host "Translating text from audio to French..."
 $result = Invoke-Webrequest -Method Post `
-          -Uri "$endpoint/translate?api-version=3.0&from=$langCode&to=fr" `
+          -Uri "$endpoint/translate?api-version=3.0&from=en&to=fr" `
           -Headers $headers `
           -Body $body 
 
