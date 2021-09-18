@@ -30,7 +30,7 @@ $italian = $analysis.translations[1]
 $chinese = $analysis.translations[2] 
 Write-Host ("Original Text: $text`nFrench Translation: $($french.text)`nItalian Translation: $($italian.text)`nChinese Translation: $($chinese.text)`n")
 
-# Code to Translate audio to audio 
+# Code to Translate audio to text in another language 
 $wav = "./data/translation/english.wav"
 
 $headers = @{}
@@ -46,25 +46,23 @@ $audio_result = Invoke-RestMethod -Method Post `
 $original_audio_text = $audio_result.DisplayText
 Write-Host ("The audio said '$($original_audio_text)'")
 
-# # Code to call get issue token 
-$token = Invoke-RestMethod -Method Post `
-          -Uri "https://westus.api.cognitive.microsoft.com/sts/v1.0/issueToken" `
+# Code to call translate audio text to different language 
+$headers = @{}
+$headers.Add( "Ocp-Apim-Subscription-Key", $key )
+$headers.Add( "Ocp-Apim-Subscription-Region", $location )
+$headers.Add( "Content-Type","application/json" )
+
+$body = "[{'text': '$original_audio_text'}]" 
+
+write-host "Translating text from audio to French..."
+$result = Invoke-Webrequest -Method Post `
+          -Uri "$endpoint/translate?api-version=3.0&from=$langCode&to=fr" `
           -Headers $headers `
-          -InFile $wav 
+          -Body $body 
 
-#Code to use the issue token to translate
-# $headers = @{}
-# $headers.Add( "Ocp-Apim-Subscription-Key", $key )
-# $headers.Add( "Content-Type","audio/wav" )
-# $headers.Add("Authorization", "Bearer $token")
-
-# $translate = Invoke-RestMethod -Method Post `
-#           -Uri "https://$location.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=fr-FR" `
-#           -Headers $headers `
-#           -Body $wav 
-
-# Write-Host ("$translate")
-
+$analysis = $result.content | ConvertFrom-Json
+$french_translation = $analysis.translations.text
+Write-host ("Translated text: '$french_translation'")
 
 
 
