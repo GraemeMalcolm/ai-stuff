@@ -86,7 +86,10 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
 5. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
 
-    The sample client application will use the Translator service to translate from one language into another. A real application could accept the input from a microphone and send the response to a speaker, but in this simple example, we'll use pre-recorded input in an audio file and save the response as another audio file.
+    The sample client application will use the Translator service to do several tasks:
+    - Translate text from English into French, Italian, and Chinese 
+    - Translate audio from English into text in French 
+    >Note: A real application could accept the input from a microphone and send the response to a speaker, but in this simple example, we'll use pre-recorded input in an audio file.
 
     Use the audio player below to hear the input audio the application will process:
 
