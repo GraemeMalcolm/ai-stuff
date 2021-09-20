@@ -32,41 +32,42 @@ To create a Form Recognizer resource in your Azure subscription:
 6. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
 7. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
-## Create a cloud shell
+## Use a cloud shell
 
+To test the capabilities of the Custom Vision service to detect objects in images, we'll use a simple command-line application that runs in the cloud shell.
 > **Note**: For this lab, you will test out an application in a cloud shell environment. When you build your own application, you can use an environment of your choice.
 
-To test the capabilities of Form Recognizer with Cognitive Services, we'll use a simple command-line application that runs in the cloud shell provided with your Azure subscription.
-
-1. In the Azure portal, select the [**>_**] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.
+1. Click the **Activate Sandbox** button at the top of the page. This starts a Cloud Shell instance to your right, as shown here. You may be prompted to review permissions. Click **Accept**. 
 
     ![Azure cloud shell pane](./media/cloud-shell.png)
 
-2. The first time you open the cloud shell, you will be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**.
+2. When you open the cloud shell, you will need to change the type of shell you are using from *Bash* to *PowerShell*. Type in pwsh and press enter. 
 
-3. If you are prompted to create storage for your cloud shell, ensure your subscription is specified and select **Create storage**. Then wait a minute or so for the storage to be created. Eventually, the cloud shell pane will display a command prompt like this:
-
-    ![Azure cloud shell PowerShell prompt](./media/powershell-prompt.png)
-
-    > **Note**: If you selected *Bash*, or you had previously opened a Bash cloud shell, you can switch to PowerShell by using the drop-down menu at the top left of the cloud shell pane.
+    ```
+    pwsh
+    ```
 
 ## Configure and run a client application
 
-Now that you have a cloud shell environment, you can run a simple client application that uses Form Recognizer to analyze a receipt.
+Now that you have a cloud shell environment, you can run a simple client application that uses the Computer Vision service to analyze an image.
 
-1. In the command shell, enter the following command to download the sample application. 
+1. In the command shell, enter the following command to download the sample application.
 
     ```
     git clone https://github.com/GraemeMalcolm/ai-stuff ai-900
     ```
 
-2. The files are downloaded to a folder named **ai-900**. To see all of the files in your cloud shell storage, select the **{ }** (*Open editor*) icon on the bar at the top of the cloud shell pane. This opens an additional editor pane above the cloud shell pane, like this:
+2. The files are downloaded to a folder named **ai-900**. Now we want to see all of the files in your cloud shell storage and work with them. Type the following command into the shell: 
 
-    ![Azure cloud shell editor](./media/editor-pane.png)
+     ```
+    code .
+    ```
 
-3. Use the separator bar above the editor pane to resize it so you can see more clearly, and then in the **Files** pane on the left, expand **ai-900** and select **form-recognizer.ps1**. This file contains some code that uses the Form Recognizer service to analyze the fields in a receipt, as shown here:
+    Notice how this opens up an editor. 
 
-    ![The editor containing code to analyze fields in a receipt.](./media/)NEED IMAGE 
+3. In the **Files** pane on the left, expand **ai-900** and select **form-recognizer.ps1**. This file contains some code that uses the Form Recognizer service to analyze the fields in a receipt, as shown here:
+
+    ![The editor containing code to analyze fields in a receipt.](./media/recognize-receipt-code.png)
 
 4. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Form Recognizer resource. Copy these from the **Keys and Endpoints** page for your resource (which should still be in the top area of the browser) and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
 
