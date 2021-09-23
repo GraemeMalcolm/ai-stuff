@@ -31,6 +31,8 @@ Let's start by creating a **Computer Vision** resource in your Azure subscriptio
 To test the capabilities of the Computer Vision service, we'll use a simple command-line application that runs in the cloud shell.
 > **Note**: For this lab, you will test out an application in a cloud shell environment. When you build your own application, you can use an environment of your choice.
 
+> SG - Image in step 1 needs updating to show the Learn sandbox, not the Azure Cloud Shell in the Azure Portal.
+
 1. Click the **Activate Sandbox** button at the top of the page. This starts a Cloud Shell instance to your right, as shown here. You may be prompted to review permissions. Click **Accept**. 
 
     ![Azure cloud shell pane](./media/cloud-shell.png)
