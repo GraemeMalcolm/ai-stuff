@@ -47,6 +47,8 @@ To test the capabilities of the Computer Vision service, we'll use a simple comm
 
 Now that you have a cloud shell environment, you can run a simple client application that uses the Computer Vision service to analyze an image.
 
+> SG - I'm assuming the GitHub repo will need to be updated too? Are we using one sandbox experience for the entire Learning Path? I'm wondering if they should clone the entire repo or if we should request that the individual file be copied to that unit within the sandbox instead. 
+
 1. In the command shell, enter the following command to download the sample application.
 
     ```
@@ -65,7 +67,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ![The editor containing code to analyze an image](./media/analyze-image-code.png)
 
-4. Don't worry too much about the code, the important thing is that it needs the endpoint URL and either of the keys for your Computer Vision resource. Copy these from the **Keys and Endpoints** page for your resource (which should still be in the top area of the browser) and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
+4. Don't worry too much about the rest of the code, the important thing is that the script needs the endpoint URL and either of the keys for your Computer Vision resource. Copy these from the **Keys and Endpoints** page for your resource (which should still be open in your Azure Portal browser window) and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
 
     >**Tip**: You need to go back to the Azure Portal for your **Keys and Endpoint**.
 
@@ -82,14 +84,14 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ![An image of a parent using a cellphone camera to take a picture of a child in in a store](./media/store-cam1.jpg)
 
-6. In the PowerShell pane, enter the following commands to run the code:
+6. In the PowerShell pane, enter the following commands to open the ai-900 folder and run the code with the image passed as a parameter:
 
     ```
     cd ai-900
     .\analyze-image.ps1 store-cam1.jpg
     ```
 
-7. Review the results of the image analysis, which include:
+7. Review the results of the image analysis, which print to the PowerShell console and include:
     - A suggested caption that describes the image.
     - A list of objects identified in the image.
     - A list of "tags" that are relevant to the image.
@@ -98,7 +100,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ![An image of person with a shopping basket in a supermarket](./media/store-cam2.jpg)
 
-    To analyze the second image, enter the following command:
+    Enter the following command to re-run the PowerShell script, passing in the second image to analyze:
 
     ```
     .\analyze-image.ps1 store-cam2.jpg
@@ -110,7 +112,7 @@ Now that you have a cloud shell environment, you can run a simple client applica
 
     ![An image of person with a shopping cart](./media/store-cam3.jpg)
 
-    To analyze the third image, enter the following command:
+    Enter the following command to re-run the PowerShell script, passing in the third image to analyze:
 
     ```
     .\analyze-image.ps1 store-cam3.jpg
