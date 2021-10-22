@@ -4,10 +4,6 @@ For example, suppose the fictitious retailer *Northwind Traders* has decided to 
 
 In this lab, you'll use a simple command-line application to see the Computer Vision service in action. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-1. Click the **Activate Sandbox** button at the top of the page. This starts a Cloud Shell instance. 
-
-2. If you are prompted to review permissions, click **Accept**. 
-
 ## Create a *Computer Vision* resource
 
 Let's create a **Computer Vision** resource in your Azure subscription:
@@ -25,9 +21,23 @@ Let's create a **Computer Vision** resource in your Azure subscription:
 
 4. View the **Keys and Endpoint** page for your Computer Vision resource. You will need the endpoint and keys to connect from client applications.
 
+## Run a Cloud Shell environment 
+
+To test the capabilities of the Computer Vision service, we'll use a simple command-line application that runs in the Cloud Shell on Azure.
+
+1. This starts Cloud Shell, as shown here. You may be prompted to review permissions. Click **Accept**. 
+
+    ![Azure cloud shell pane](./media/cloud-shell.png)
+
+2. When you open the Cloud Shell, you will need to change the type of shell you are using from *Bash* to *PowerShell*. Type in pwsh and press enter. 
+
+    ```
+    pwsh
+    ```
+
 ## Configure and run a client application
 
-Now that you have a resource, you can run a simple client application that uses the Computer Vision service to analyze an image.
+Now that you have a Cloud sShell environment, you can run a simple application that uses the Computer Vision service to analyze an image.
 
 1. In the command shell, enter the following command to download the sample application and save it to a folder called ai-900.
 
