@@ -21,7 +21,7 @@ Let's create a **Computer Vision** resource in your Azure subscription:
 
 4. View the **Keys and Endpoint** page for your Computer Vision resource. You will need the endpoint and keys to connect from client applications.
 
-## Run a Cloud Shell environment 
+## Run Cloud Shell 
 
 To test the capabilities of the Computer Vision service, we'll use a simple command-line application that runs in the Cloud Shell on Azure.
 
