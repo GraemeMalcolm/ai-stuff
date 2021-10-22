@@ -91,7 +91,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
 ## Configure and run a client application
 
-Now that you have a Cloud Shell environment, you can run a simple application that uses the Computer Vision service to analyze an image.
+Now that you have a Cloud Shell environment, you can run a simple application that uses the Custom Vision service to analyze an image.
 
 1. In the command shell, enter the following command to download the sample application and save it to a folder called ai-900.
 
