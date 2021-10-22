@@ -25,15 +25,18 @@ Let's create a **Computer Vision** resource in your Azure subscription:
 
 To test the capabilities of the Computer Vision service, we'll use a simple command-line application that runs in the Cloud Shell on Azure.
 
-1. This starts Cloud Shell, as shown here. You may be prompted to review permissions. Click **Accept**. 
+1. In the Azure portal, select the **[>_]** (*Cloud Shell*) button at the top of the page to the left of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.
 
     ![Azure cloud shell pane](./media/cloud-shell.png)
 
-2. When you open the Cloud Shell, you will need to change the type of shell you are using from *Bash* to *PowerShell*. Type in pwsh and press enter. 
+2. The first time you open the cloud shell, you will be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**.
 
-    ```
-    pwsh
-    ```
+3. If you are prompted to create storage for your cloud shell, ensure your subscription is specified and select **Create storage**. Then wait a minute or so for the storage to be created. Eventually, the cloud shell pane will display a command prompt like this:
+
+    ![Azure cloud shell PowerShell prompt](./media/powershell-prompt.png)
+
+    > **Note**: If you selected *Bash*, or you had previously opened a Bash cloud shell, you can switch to PowerShell by using the drop-down menu at the top left of the cloud shell pane.
+
 
 ## Configure and run a client application
 
