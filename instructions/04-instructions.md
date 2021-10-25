@@ -2,10 +2,6 @@ Computer vision solutions often require an artificial intelligence (AI) solution
 
 To test the capabilities of the Face service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-1. Click the **Activate Sandbox** button at the top of the page. This starts a Cloud Shell instance. 
-
-2. If you are prompted to review permissions, click **Accept**.
-
 ## Create a *Face* resource
 
 Let's start by creating a **Face** resource in your Azure subscription:
@@ -22,9 +18,26 @@ Let's start by creating a **Face** resource in your Azure subscription:
 3. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
 4. View the **Keys and Endpoint** page for your Face resource. You will need the endpoint and keys to connect from client applications.
 
+## Run Cloud Shell 
+
+To test the capabilities of the Face service, we'll use a simple command-line application that runs in the Cloud Shell on Azure. 
+
+1. In the Azure portal, select the **[>_]** (*Cloud Shell*) button at the top of the page to the left of the search box. This opens a Cloud Shell pane at the bottom of the portal, as shown here.
+
+    ![Azure cloud shell pane](./media/cloud-shell.png)
+
+2. The first time you open the cloud shell, you will be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**.
+
+3. If you are prompted to create storage for your cloud shell, ensure your subscription is specified and select **Create storage**. Then wait a minute or so for the storage to be created. Eventually, the cloud shell pane will display a command prompt like this:
+
+    ![Azure cloud shell PowerShell prompt](./media/powershell-prompt.png)
+
+    > **Note**: If you selected *Bash*, or you had previously opened a Bash cloud shell, you can switch to PowerShell by using the drop-down menu at the top left of the cloud shell pane.
+
+
 ## Configure and run a client application
 
-Now that you have a Cloud Shell environment, you can run a simple client application that uses the Computer Vision service to analyze an image.
+Now that you have a custom model, you can run a simple client application that uses the Face service.
 
 1. In the command shell, enter the following command to download the sample application and save it to a folder called ai-900.
 
