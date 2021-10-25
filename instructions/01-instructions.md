@@ -4,7 +4,7 @@ For example, suppose the fictitious retailer *Northwind Traders* has decided to 
 
 In this lab, you'll use a simple command-line application to see the Computer Vision service in action. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Create a *Cognitive Service* resource
+## Create a *Cognitive Services* resource
 
 You can use the Computer Vision service by creating either a **Computer Vision** resource or a **Cognitive Services** resource.
 
@@ -61,7 +61,7 @@ Now that you have a Cloud sShell environment, you can run a simple application t
 
     ![The editor containing code to analyze an image](../media/analyze-image-code.png)
 
-4. Don't worry too much about the code, the important thing is that it needs the endpoint URL and either of the keys for your Cognitive Service resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
+4. Don't worry too much about the code, the important thing is that it needs the endpoint URL and either of the keys for your Cognitive Services resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
 
     > [!TIP] 
     > You need to go back to the Azure Portal for your **Keys and Endpoint**.
