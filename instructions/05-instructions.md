@@ -9,7 +9,7 @@ The **Computer Vision** cognitive service provides support for OCR tasks, includ
 - An **OCR** API that you can use to read text in multiple languages. This API can be used synchronously, and works well when you need to detect and read a small amount of text in an image.
 - A **Read** API that is optimized for larger documents. This API is used asynchronously, and can be used for both printed and handwritten text.
 
-You can use this service by creating either a **Computer Vision** resource or a **Cognitive Services** resource.
+You can use the Computer Vision service by creating either a **Computer Vision** resource or a **Cognitive Services** resource.
 
 If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
 
