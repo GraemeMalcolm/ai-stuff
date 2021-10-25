@@ -6,9 +6,9 @@ Form Recognizer uses machine learning models trained to extract text from images
 
 To test the capabilities of the Form Recognizer service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Create a *Cognitive Service* resource
+## Create a *Cognitive Services* resource
 
-You can use the Computer Vision service by creating either a **Form Recognizer** resource or a **Cognitive Services** resource.
+You can use the Form Recognizer service by creating either a **Form Recognizer** resource or a **Cognitive Services** resource.
 
 If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
 
