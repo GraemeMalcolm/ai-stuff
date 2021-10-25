@@ -4,22 +4,23 @@ For example, suppose the fictitious retailer *Northwind Traders* has decided to 
 
 In this lab, you'll use a simple command-line application to see the Computer Vision service in action. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Create a *Computer Vision* resource
+## Create a *Cognitive Service* resource
 
-Let's create a **Computer Vision** resource in your Azure subscription:
+You can use the Computer Vision service by creating either a **Computer Vision** resource or a **Cognitive Services** resource.
+
+If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
-2. Click the **&#65291;Create a resource** button, search for *Computer Vision*, and create a **Computer Vision** resource with the following settings:
-    - **Subscription**: *Your Azure subscription or Concierge Subscription*. 
-    - **Resource group**: *Select an existing resource group or create a new one*.
-    - **Region**: *Choose any available region*
+2. Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
+    - **Subscription**: *Your Azure subscription*.
+    - **Resource group**: *Select or create a resource group with a unique name*.
+    - **Region**: *Choose any available region*:
     - **Name**: *Enter a unique name*.
-    - **Pricing tier**: Free F0
-    - **Responsible AI Notice**: *Scroll down if necessary, and select the checkbox to confirm you have read the notice*.
+    - **Pricing tier**: S0
+    - **I confirm I have read and understood the notices**: Selected.
 
 3. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
-
-4. View the **Keys and Endpoint** page for your Computer Vision resource. You will need the endpoint and keys to connect from client applications.
+4. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
 ## Run Cloud Shell 
 
@@ -60,7 +61,7 @@ Now that you have a Cloud sShell environment, you can run a simple application t
 
     ![The editor containing code to analyze an image](../media/analyze-image-code.png)
 
-4. Don't worry too much about the code, the important thing is that it needs the endpoint URL and either of the keys for your Computer Vision resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
+4. Don't worry too much about the code, the important thing is that it needs the endpoint URL and either of the keys for your Cognitive Service resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
 
     > [!TIP] 
     > You need to go back to the Azure Portal for your **Keys and Endpoint**.
