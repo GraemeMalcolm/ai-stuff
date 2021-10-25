@@ -6,26 +6,23 @@ Form Recognizer uses machine learning models trained to extract text from images
 
 To test the capabilities of the Form Recognizer service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Create a Form Recognizer resource
+## Create a *Cognitive Service* resource
 
-> [!NOTE]
-> You can either use a Cognitive Service resource or a Form Recognizer resource to access Form Recognizer services. 
+You can use the Computer Vision service by creating either a **Form Recognizer** resource or a **Cognitive Services** resource.
 
-To create a Form Recognizer resource in your Azure subscription:
+If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
-2. Select **+ Create a resource**, and search for *Form Recognizer*.
-3. In the list of services, select **Form Recognizer**.
-4. In the **Form Recognizer** blade, select **Create**.
-5. In the **Create** blade, enter the following details and select **Create**
-   - **Name**: A unique name for your service
-   - **Subscription**: Your Azure subscription
-   - **Region**: Any available region
-   - **Pricing tier**: F0
-   - **Resource Group**: The existing resource group you used previously
-   - **I confirm I have read and understood the notice below**: Selected.
-6. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
-7. View the **Keys and Endpoint** page for your resource. This is located on the left hand side of the pane. You will need the endpoint and keys to connect from client applications.
+2. Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
+    - **Subscription**: *Your Azure subscription*.
+    - **Resource group**: *Select or create a resource group with a unique name*.
+    - **Region**: *Choose any available region*:
+    - **Name**: *Enter a unique name*.
+    - **Pricing tier**: S0
+    - **I confirm I have read and understood the notices**: Selected.
+
+3. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
+4. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
 ## Run Cloud Shell 
 
@@ -66,7 +63,7 @@ Now that you have a custom model, you can run a simple client application that u
 
     ![The editor containing code to analyze fields in a receipt.](../media/recognize-receipt-code.png)
 
-4. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Form Recognizer resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
+4. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Cognitive Services resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_ENDPOINT** and **YOUR_KEY** placeholder values respectively.
 
 5. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**. Now that you've set up the key and endpoint, you can use your resource to analyze fields from a receipt. In this case, you'll use the Form Recognizer's built-in model to analyze a receipt for the fictional Northwind Traders retail company.
 
